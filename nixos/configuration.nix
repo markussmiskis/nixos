@@ -5,9 +5,10 @@
   ...
 }: {
   imports = [
-    ./hardware-configuration.nix
-    ./packages.nix
-    ./modules/include.nix
+    ./hardware-configuration.nix # hardware setup
+    ./disko.nix # filesystem setup
+    ./packages.nix # system packages
+    ./modules/include.nix # system modules
   ];
 
   system.stateVersion = "24.05";

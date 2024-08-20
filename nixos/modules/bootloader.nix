@@ -3,7 +3,7 @@
     initrd = {
       luks.devices.root = {
         preLVM = true;
-        device = "/dev/disk/by-uuid/REPLACEME";
+        device = "/dev/nvme0n1p2";
       };
     };
     loader = {
