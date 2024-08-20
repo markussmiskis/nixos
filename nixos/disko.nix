@@ -27,9 +27,6 @@
                 type = "luks";
                 name = "crypt";
                 extraOpenArgs = [ ];
-                settings = {
-                  keyFile = "/tmp/secret.key";
-                };
                 content = {
                   type = "lvm_pv";
                   vg = "lvm";
