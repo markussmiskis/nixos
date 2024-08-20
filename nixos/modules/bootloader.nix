@@ -1,5 +1,11 @@
 {
   boot = {
+    initrd = {
+      luks.devices.root = {
+        preLVM = true;
+        device = "/dev/disk/by-uuid/REPLACEME";
+      };
+    };
     loader = {
       efi = {
         canTouchEfiVariables = true;

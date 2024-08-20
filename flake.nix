@@ -1,5 +1,5 @@
 {
-  description = "My system configuration";
+  description = "Multi-System Configuration";
 
   inputs = {
     
@@ -21,7 +21,16 @@
         inherit inputs system;
       };
       modules = [
-        ./nixos/configuration.nix
+        ./hosts/markuss-t480/configuration.nix
+      ];
+    };
+
+    nixosConfigurations.markuss-vm = nixpkgs.lib.nixosSystem {
+      specialArgs = {
+        inherit inputs system;
+      };
+      modules = [
+        ./hosts/markuss-vm/configuration.nix
       ];
     };
 
