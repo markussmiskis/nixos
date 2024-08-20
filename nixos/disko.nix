@@ -25,14 +25,14 @@
               size = "100%";
               content = {
                 type = "luks";
-                name = "crypted";
+                name = "crypt";
                 extraOpenArgs = [ ];
                 settings = {
                   keyFile = "/tmp/secret.key";
                 };
                 content = {
                   type = "lvm_pv";
-                  vg = "pool";
+                  vg = "lvm";
                 };
               };
             };
@@ -41,7 +41,7 @@
       };
     };
     lvm_vg = {
-      pool = {
+      lvm = {
         type = "lvm_vg";
         lvs = {
           swap = {
